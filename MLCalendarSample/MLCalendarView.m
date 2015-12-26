@@ -73,6 +73,7 @@
 	self.backgroundColor = [NSColor whiteColor];
 	self.textColor = [NSColor blackColor];
 	self.selectionColor = [NSColor redColor];
+    self.selectionTextColor = [NSColor blackColor];
 	self.todayMarkerColor = [NSColor greenColor];
 	self.dayMarkerColor = [NSColor darkGrayColor];
 	self.dayCells = [NSMutableArray array];
