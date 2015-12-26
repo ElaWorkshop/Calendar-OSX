@@ -18,6 +18,7 @@
 @property (nonatomic, copy) NSColor* selectionColor;
 @property (nonatomic, copy) NSColor* selectionTextColor;
 @property (nonatomic, copy) NSColor* todayMarkerColor;
+@property (nonatomic, copy) NSColor* todayTextColor;
 @property (nonatomic, copy) NSColor* dayMarkerColor;
 
 @property (nonatomic,weak) id<MLCalendarViewDelegate> delegate;

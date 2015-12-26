@@ -80,13 +80,17 @@
 		NSRectFill(bounds);
 		
 		
-		if(self.representedDate) {
+		if (self.representedDate) {
 			//selection
-			if(self.selected) {
-				NSRect circeRect = NSInsetRect(bounds, 3.5f, 3.5f);
-				circeRect.origin.y += 1;
-				NSBezierPath* bzc = [NSBezierPath bezierPathWithOvalInRect:circeRect];
-				[self.owner.selectionColor set];
+			if (self.selected || self.isToday) {
+				NSRect rect = NSInsetRect(bounds, 5, 6);
+				NSBezierPath* bzc = [NSBezierPath bezierPathWithRoundedRect:rect xRadius:3 yRadius:3];
+                if (self.selected) {
+                    [self.owner.selectionColor set];
+                }
+                else {
+                    [self.owner.todayMarkerColor set];
+                }
 				[bzc fill];
 			}
 			
@@ -96,10 +100,17 @@
 			
 			
 			//title
+            NSColor *textColor = self.owner.textColor;
+            if (self.selected) {
+                textColor = self.owner.selectionTextColor;
+            }
+            else if (self.isToday) {
+                textColor = self.owner.todayTextColor;
+            }
 			NSDictionary *attrs = @{
                                     NSParagraphStyleAttributeName: aParagraphStyle,
                                     NSFontAttributeName: self.font,
-                                    NSForegroundColorAttributeName: self.selected ? self.owner.selectionTextColor : self.owner.textColor
+                                    NSForegroundColorAttributeName: textColor
                                     };
 			
 			NSSize size = [self.title sizeWithAttributes:attrs];
@@ -119,14 +130,6 @@
 			[self.owner.dayMarkerColor set];
 			topLine.lineWidth = 0.3f;
 			[topLine stroke];
-			if([self isToday]) {
-				[self.owner.todayMarkerColor set];
-				NSBezierPath* bottomLine = [NSBezierPath bezierPath];
-				[bottomLine moveToPoint:NSMakePoint(NSMinX(bounds), NSMaxY(bounds))];
-				[bottomLine lineToPoint:NSMakePoint(NSMaxX(bounds), NSMaxY(bounds))];
-				bottomLine.lineWidth = 4.0f;
-				[bottomLine stroke];
-			}
 		}
 		[NSGraphicsContext restoreGraphicsState];
 	}

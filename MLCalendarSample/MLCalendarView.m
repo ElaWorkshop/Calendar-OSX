@@ -71,10 +71,11 @@
 
 - (void) commonInit {
 	self.backgroundColor = [NSColor whiteColor];
-	self.textColor = [NSColor blackColor];
+	self.textColor = [NSColor labelColor];
 	self.selectionColor = [NSColor redColor];
     self.selectionTextColor = [NSColor blackColor];
 	self.todayMarkerColor = [NSColor greenColor];
+    self.todayTextColor = [NSColor whiteColor];
 	self.dayMarkerColor = [NSColor darkGrayColor];
 	self.dayCells = [NSMutableArray array];
 	for(int i = 0; i < 6; i++) {
@@ -111,7 +112,7 @@
 	NSDateFormatter *df = [[NSDateFormatter alloc] init];
 	NSArray *days = [df shortStandaloneWeekdaySymbols];
 	for(NSInteger i = 0; i < days.count;i++) {
-		NSString* day = [days[i] uppercaseString];
+		NSString* day = days[i];
 		NSInteger col = [self colForDay:i+1];
 		NSTextField* tf = self.dayLabels[col];
 		tf.stringValue = day;
