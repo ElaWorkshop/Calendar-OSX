@@ -135,19 +135,10 @@
 - (void) setDate:(NSDate *)date {
 	_date = [self toUTC:date];
 	[self layoutCalendar];
-	NSCalendar *cal = [NSCalendar currentCalendar];
-	cal.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
-	unsigned unitFlags = NSCalendarUnitDay| NSCalendarUnitYear | NSCalendarUnitMonth;
-	NSDateComponents *components = [cal components:unitFlags fromDate:self.date];
-	NSInteger month = components.month;
-	NSInteger year = components.year;
-	
+
 	NSDateFormatter *df = [[NSDateFormatter alloc] init];
-	NSString *monthName = [df standaloneMonthSymbols][month-1];
-	NSString* mnFirstLetter = [[monthName substringToIndex:1] uppercaseString];
-	NSString* mnLastPart = [monthName substringFromIndex:1];
-	monthName = [NSString stringWithFormat:@"%@%@",mnFirstLetter,mnLastPart];
-	NSString* budgetDateSummary = [NSString stringWithFormat:@"%@, %ld",monthName,year];
+    df.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"MMMMYYYY" options:0 locale:[NSLocale currentLocale]];
+	NSString *budgetDateSummary = [df stringFromDate:date];
 	self.calendarTitle.stringValue = budgetDateSummary;
 }
 
