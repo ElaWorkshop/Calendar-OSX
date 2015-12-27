@@ -55,7 +55,6 @@
 	_representedDate = representedDate;
 	if(_representedDate) {
 		NSCalendar *cal = [NSCalendar currentCalendar];
-		cal.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 		unsigned unitFlags = NSCalendarUnitDay;// | NSCalendarUnitYear | NSCalendarUnitMonth;
 		NSDateComponents *components = [cal components:unitFlags fromDate:_representedDate];
 		NSInteger day = components.day;
