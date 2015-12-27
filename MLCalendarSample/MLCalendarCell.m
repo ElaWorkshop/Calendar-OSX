@@ -106,6 +106,10 @@
             else if (self.isToday) {
                 textColor = self.owner.todayTextColor;
             }
+            else if (!self.isInCurrentMonth) {
+                textColor = [textColor colorWithAlphaComponent:0.35];
+            }
+            
 			NSDictionary *attrs = @{
                                     NSParagraphStyleAttributeName: aParagraphStyle,
                                     NSFontAttributeName: self.font,

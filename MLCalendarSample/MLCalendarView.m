@@ -214,21 +214,19 @@
 	unsigned unitFlags = NSCalendarUnitWeekday;
 	NSDateComponents *components = [cal components:unitFlags fromDate:[self monthDay:1]];
 	NSInteger firstDay = components.weekday;
-	NSInteger lastDay = [self lastDayOfTheMonth];
-	NSInteger col = [self colForDay:firstDay];
-	NSInteger day = 1;
-	for(int row = 0; row < 6;row++) {
-		for(; col < 7; col++) {
-			if(day <= lastDay) {
-				MLCalendarCell*cell = self.dayCells[row][col];
-				NSDate* d = [self monthDay:day];
-				cell.representedDate = d;
-				BOOL selected = [MLCalendarView isSameDate:d date:_selectedDate];
-				cell.selected = selected;
-				day++;
-			}
+	NSInteger numDays = [self lastDayOfTheMonth];
+	NSInteger colOfFirstDay = [self colForDay:firstDay];
+	NSInteger day = 1 - colOfFirstDay;
+	for (int row = 0; row < 6; row++) {
+		for (int col = 0; col < 7; col++) {
+            MLCalendarCell *cell = self.dayCells[row][col];
+            NSDate *d = [self monthDay:day];
+            cell.representedDate = d;
+            BOOL selected = [MLCalendarView isSameDate:d date:_selectedDate];
+            cell.selected = selected;
+            cell.isInCurrentMonth = (day >= 1 && day <= numDays);
+            day += 1;
 		}
-		col = 0;
 	}
 }
 
