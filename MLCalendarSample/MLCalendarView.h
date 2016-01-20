@@ -13,7 +13,7 @@
 @end
 
 @interface MLCalendarView : NSViewController
-@property (nonatomic, copy) NSColor* backgroundColor;
+//@property (nonatomic, copy) NSColor* backgroundColor;
 @property (nonatomic, copy) NSColor* textColor;
 @property (nonatomic, copy) NSColor* selectionColor;
 @property (nonatomic, copy) NSColor* selectionTextColor;

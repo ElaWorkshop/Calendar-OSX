@@ -69,7 +69,7 @@
 }
 
 - (void) commonInit {
-	self.backgroundColor = [NSColor whiteColor];
+//	self.backgroundColor = [NSColor whiteColor];
 	self.textColor = [NSColor labelColor];
 	self.selectionColor = [NSColor redColor];
     self.selectionTextColor = [NSColor blackColor];
@@ -116,8 +116,8 @@
 		NSTextField* tf = self.dayLabels[col];
 		tf.stringValue = day;
 	}
-	MLCalendarBackground* bv = (MLCalendarBackground*)self.view;
-	bv.backgroundColor = self.backgroundColor;
+//	MLCalendarBackground* bv = (MLCalendarBackground*)self.view;
+//	bv.backgroundColor = self.backgroundColor;
     self.date = [NSDate date];
 }
 

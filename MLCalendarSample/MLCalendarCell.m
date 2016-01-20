@@ -75,8 +75,8 @@
 //		} else {
 //		}
 		
-		[self.owner.backgroundColor set];
-		NSRectFill(bounds);
+//		[self.owner.backgroundColor set];
+//		NSRectFill(bounds);
 		
 		
 		if (self.representedDate) {

@@ -32,9 +32,9 @@
 	self.backgroundColor = [NSColor whiteColor];
 }
 
-- (void)drawRect:(NSRect)dirtyRect {
-	[self.backgroundColor set];
-	NSRectFill(self.bounds);
-}
+//- (void)drawRect:(NSRect)dirtyRect {
+//	[self.backgroundColor set];
+//	NSRectFill(self.bounds);
+//}
 
 @end
