@@ -747,7 +747,6 @@
                         <constraint firstItem="8zV-FZ-zsg" firstAttribute="top" secondItem="KBf-gd-ttk" secondAttribute="bottom" constant="8" id="Fai-N3-p2d"/>
                         <constraint firstItem="OKZ-qP-S4X" firstAttribute="top" secondItem="6Pi-FR-JaN" secondAttribute="bottom" constant="30" id="Ikd-iv-s1v"/>
                         <constraint firstAttribute="bottom" secondItem="OKZ-qP-S4X" secondAttribute="bottom" constant="31" id="Jwg-SY-Jaq"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="KdM-Bh-aWG"/>
                         <constraint firstAttribute="trailing" secondItem="OKZ-qP-S4X" secondAttribute="trailing" constant="9" id="Lni-y3-MkQ"/>
                         <constraint firstAttribute="trailing" secondItem="gxY-0U-QHT" secondAttribute="trailing" constant="9" id="Pm5-3X-YnX"/>
                         <constraint firstAttribute="trailing" secondItem="KBf-gd-ttk" secondAttribute="trailing" constant="22" id="QRs-KQ-0sB"/>
