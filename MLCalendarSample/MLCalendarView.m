@@ -16,6 +16,7 @@
 - (IBAction)nextMonth:(id)sender;
 - (IBAction)prevMonth:(id)sender;
 
+@property (nonatomic, strong) NSArray *allSubviews;
 @property (strong) NSMutableArray* dayLabels;
 @property (strong) NSMutableArray* dayCells;
 //@property (nonatomic, strong) NSDate* date;
@@ -91,6 +92,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.allSubviews = [self allSubviewsOfView:self.view];
 	self.dayLabels = [NSMutableArray array];
 	for(int i = 1; i < 8; i++) {
 		NSString* _id = [NSString stringWithFormat:@"day%d",i];
@@ -122,12 +124,19 @@
 }
 
 - (id) viewByID:(NSString*)_id {
-	for (NSView *subview in self.view.subviews) {
+	for (NSView *subview in self.allSubviews) {
 		if([subview.identifier isEqualToString:_id]) {
 			return subview;
 		}
 	}
 	return nil;
+}
+
+- (NSArray *)allSubviewsOfView:(NSView *)view {
+    NSMutableArray *subviews = [[view subviews] mutableCopy];
+    for (NSView *subview in [view subviews])
+        [subviews addObjectsFromArray:[self allSubviewsOfView:subview]]; //recursive
+    return subviews;
 }
 
 - (void) setDate:(NSDate *)date {
