@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Gyetván András" => "gyetvan.andras@gmail.com" }
 
-  s.platform     = :osx, '10.10'
+  s.platform     = :osx, '10.11'
   s.source       = { :git => "https://github.com/gyetvan-andras/Calendar-OSX.git", :tag => s.version }
   s.source_files = 'MLCalendarSample/ML*.{h,m}'
   s.resources    = 'MLCalendarSample/*.xib'
