@@ -8,7 +8,6 @@
 
 #import "MLCalendarView.h"
 #import "MLCalendarCell.h"
-#import "MLCalendarBackground.h"
 
 @interface MLCalendarView ()
 

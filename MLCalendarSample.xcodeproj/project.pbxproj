@@ -13,7 +13,6 @@
 		B338CBA71AADA61800365DCA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B338CBA51AADA61800365DCA /* MainMenu.xib */; };
 		B338CBC41AADA65800365DCA /* MLCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B338CBBE1AADA65800365DCA /* MLCalendarView.m */; };
 		B338CBC51AADA65800365DCA /* MLCalendarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B338CBBF1AADA65800365DCA /* MLCalendarView.xib */; };
-		B338CBC61AADA65800365DCA /* MLCalendarBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = B338CBC11AADA65800365DCA /* MLCalendarBackground.m */; };
 		B338CBC71AADA65800365DCA /* MLCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B338CBC31AADA65800365DCA /* MLCalendarCell.m */; };
 		B338CBC91AADA67100365DCA /* CalendarTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = B338CBC81AADA67100365DCA /* CalendarTemplate.png */; };
 /* End PBXBuildFile section */
@@ -29,8 +28,6 @@
 		B338CBBD1AADA65800365DCA /* MLCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCalendarView.h; sourceTree = "<group>"; };
 		B338CBBE1AADA65800365DCA /* MLCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCalendarView.m; sourceTree = "<group>"; };
 		B338CBBF1AADA65800365DCA /* MLCalendarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLCalendarView.xib; sourceTree = "<group>"; };
-		B338CBC01AADA65800365DCA /* MLCalendarBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCalendarBackground.h; sourceTree = "<group>"; };
-		B338CBC11AADA65800365DCA /* MLCalendarBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCalendarBackground.m; sourceTree = "<group>"; };
 		B338CBC21AADA65800365DCA /* MLCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLCalendarCell.h; sourceTree = "<group>"; };
 		B338CBC31AADA65800365DCA /* MLCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLCalendarCell.m; sourceTree = "<group>"; };
 		B338CBC81AADA67100365DCA /* CalendarTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CalendarTemplate.png; sourceTree = "<group>"; };
@@ -92,8 +89,6 @@
 				B338CBBD1AADA65800365DCA /* MLCalendarView.h */,
 				B338CBBE1AADA65800365DCA /* MLCalendarView.m */,
 				B338CBBF1AADA65800365DCA /* MLCalendarView.xib */,
-				B338CBC01AADA65800365DCA /* MLCalendarBackground.h */,
-				B338CBC11AADA65800365DCA /* MLCalendarBackground.m */,
 				B338CBC21AADA65800365DCA /* MLCalendarCell.h */,
 				B338CBC31AADA65800365DCA /* MLCalendarCell.m */,
 			);
@@ -139,6 +134,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -172,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B338CBC71AADA65800365DCA /* MLCalendarCell.m in Sources */,
-				B338CBC61AADA65800365DCA /* MLCalendarBackground.m in Sources */,
 				B338CBA21AADA61800365DCA /* main.m in Sources */,
 				B338CBA01AADA61800365DCA /* AppDelegate.m in Sources */,
 				B338CBC41AADA65800365DCA /* MLCalendarView.m in Sources */,
